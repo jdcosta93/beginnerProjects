@@ -1,0 +1,21 @@
+// Speak whale by only using vowels from input, enlongating 'u' and 'e' 
+const input = "Want to humpback at my place";
+const vowels = ["a", "e", "i", "o", "u"];
+const resultArray = [];
+// Loop to iterate through [i] of i
+// and duplicate u + e when pushed to empty array
+for (let i = 0; i < input.length; i++) {
+  if (input[i] === "u" || input[i] === "e") {
+    resultArray.push(input[i]);
+  }
+  // 2nd Loop to compare v against i
+  // and push to empty array if v[v] === i[i]
+  for (let v = 0; v < vowels.length; v++) {
+    if (input[i] === vowels[v]) {
+      resultArray.push(input[i]);
+    }
+  }
+}
+// .Join() array into a string, capitatlise and print result
+let resultString = resultArray.join();
+console.log(resultString.toUpperCase());
